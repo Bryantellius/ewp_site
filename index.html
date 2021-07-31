@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="slick/slick.css"/>    
     <link rel="stylesheet" href="slick/slick-theme.css"/>    
     <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/templatemo-dream-pulse.css" />
+    <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
     <main class="container-fluid">
@@ -26,11 +26,11 @@
                 <h1 class="tm-brand text-uppercase">Logo</h1>
               </div>
 
-              <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav">
+              <ul id="tmMainNav" class="nav flex-column text-right tm-main-nav">
                 <li class="nav-item">
-                  <a href="#welcome" class="nav-link d-flex flex-column align-items-center justify-content-center">
+                  <a href="#welcome" class="nav-link active d-flex flex-column align-items-center justify-content-center">
                     <span class="d-inline-block">01</span>
-                    <span class="d-inline-block active">Welcome</span>
+                    <span class="d-inline-block">Welcome</span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -60,41 +60,41 @@
               </ul>
               <ul class="nav flex-row tm-social-links">
                 <li class="nav-item">
-                  <a href="https://facebook.com" class="nav-link tm-social-link">
+                  <a href="#" class="nav-link tm-color-primary">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link tm-color-gray">
                     <i class="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="https://twitter.com" class="nav-link tm-social-link">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://dribbble.com" class="nav-link tm-social-link">
-                    <i class="fab fa-dribbble"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://linkedin.com" class="nav-link tm-social-link">
+                  <a href="#" class="nav-link tm-color-gray">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link tm-color-gray">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
               </ul>
-              <footer class="text-center text-white small">
-                <p class="mb--0 mb-2">Copyright 2021 BxB</p>
+              <footer class="text-center text-muted small">
+                <p class="mb--0 mb-2">Copyright 2021 BB</p>
               </footer>
             </div>
           </nav>
           
-          <main role="main" class="ml-sm-auto col-12">
+          <main role="main" class="ml-sm-auto col-12 scrollspy-example" data-bs-target="#tmSidebar" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
             <div
               class="parallax-window"
               data-parallax="scroll"
               data-image-src="img/">
               <div class="tm-section-wrap">
-                <section id="intro" class="tm-section">
+                <section id="welcome" class="tm-section">
                     <div class="tm-intro">
-                        <h6 class="mb-2 tm-color-primary text-uppercase">Welcome</h6>
+                        <h6 class="mb-2 tm-color-primary text-spacing-6 text-uppercase">Welcome</h6>
                         <h2 class="tm-section-title mb-5 tm-color-light">Hello!<br>We Are Eagle Wing</h2>
                         <p class="tm-color-gray">
                           We are a video production company. We do a lot of corporate work but hope to eventually branch out to more commercial clients
@@ -104,8 +104,8 @@
             </div>            
           </div>
 
-          <div class="tm-section-wrap bg-white">
-            <section id="about" class="row tm-section">
+          <div class="tm-section-wrap">
+            <section id="our_work" class="row tm-section">
               <div class="col-xl-6">
                 <div class="tm-section-half">    
                     <div><i class="fas fa-6x fa-balance-scale mb-5 tm-section-icon"></i></div>                        
@@ -141,8 +141,8 @@
             </section>
           </div>
             
-          <div class="tm-section-wrap bg-white">
-            <section id="work" class="row tm-section">
+          <div class="tm-section-wrap">
+            <section id="services" class="row tm-section">
               <div class="col-12">
                 <div class="w-100 tm-double-border-1 tm-border-gray">
                     <div class="tm-double-border-2 tm-border-gray tm-box-pad">
@@ -237,8 +237,8 @@
             </section>
           </div>
             
-          <div class="tm-section-wrap bg-white">
-            <section id="clients" class="row tm-section">
+          <div class="tm-section-wrap">
+            <section id="our_team" class="row tm-section">
               <div class="col-12 tm-section-pad">
                   <div class="tm-flex-item-left">
                       <div class="tm-w-80">
@@ -298,8 +298,8 @@
             </section>
           </div>
             
-          <div class="tm-section-wrap bg-white">
-            <section id="talk" class="row tm-section">
+          <div class="tm-section-wrap">
+            <section id="contact" class="row tm-section">
                 <div class="col-xl-6 mb-5">
                   <div class="tm-double-border-1 tm-border-gray">
                     <div class="tm-double-border-2 tm-border-gray tm-box-pad">
@@ -348,6 +348,6 @@
     <script src="js/parallax.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/templatemo-scripts.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

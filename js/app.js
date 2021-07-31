@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Single Page Nav for highlighting nav items
   $("#tmMainNav").singlePageNav();
 
@@ -18,60 +18,60 @@ $(document).ready(function() {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 1200,
         settings: {
           arrows: false,
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 991,
         settings: {
           arrows: false,
           slidesToShow: 3,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 767,
         settings: {
           arrows: false,
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           arrows: false,
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+          slidesToScroll: 1,
+        },
+      },
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
-    ]
+    ],
   });
 
   // Image Pop Up
   $(".tm-gallery").magnificPopup({
     delegate: "a", // child items selector, by clicking on it popup will open
     type: "image",
-    gallery: { enabled: true }
+    gallery: { enabled: true },
   });
 
-  $(".navbar-toggler").on("click", function(e) {
+  $(".navbar-toggler").on("click", function (e) {
     $(".tm-sidebar").toggleClass("show");
     e.stopPropagation();
   });
 
-  $("html").click(function(e) {
+  $("html").click(function (e) {
     var sidebar = document.getElementById("tmSidebar");
 
     if (!sidebar.contains(e.target)) {
@@ -79,7 +79,31 @@ $(document).ready(function() {
     }
   });
 
-  $("#tmMainNav .nav-link").click(function(e) {
+  $("#tmMainNav .nav-link").click(function (e) {
     $(".tm-sidebar").removeClass("show");
+  });
+
+  function toggleSideNavItem(e, ele) {
+    document
+      .querySelectorAll(".nav-link")
+      .forEach((ele) => ele.classList.remove("active"));
+    ele.classList.add("active");
+  }
+
+  // Load nav-links with click listeners to label active
+  document
+    .querySelectorAll(".nav-link")
+    .forEach((ele) =>
+      ele.addEventListener("click", (e) => toggleSideNavItem(e, ele))
+    );
+
+  // Scroll by's for sections to label nav-links as active
+  const screenHeight = window.innerHeight;
+  window.addEventListener("scroll", () => {
+    const i = Math.floor(window.scrollY / screenHeight);
+    document.querySelectorAll(".nav-link").forEach((ele, idx) => {
+      if (idx === i) ele.classList.add("active");
+      else ele.classList.remove("active");
+    });
   });
 });

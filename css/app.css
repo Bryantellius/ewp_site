@@ -1,10 +1,27 @@
+:root {
+  --primary: #be8f1a;
+  --secondary: #646674;
+  --gray: #323337;
+  --dark: #212126;
+}
+
 body {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Century Gothic Regular", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 400;
   overflow-x: hidden;
-  color: #505050;
-  background: radial-gradient(circle at top, #222 -75%, #181818);
+  color: var(--secondary);
+  background: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Century Gothic Bold", Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 
 p {
@@ -25,11 +42,11 @@ a {
 }
 
 .tm-color-primary {
-  color: #9d8300;
+  color: var(--primary);
 }
 
 .tm-color-gray {
-  color: #8d8d8d;
+  color: var(--secondary);
 }
 
 .tm-color-light {
@@ -37,7 +54,7 @@ a {
 }
 
 .tm-sidebar-border-right {
-  border-right: #505050;
+  border-right: var(--secondary);
   border-width: 1px;
   border-style: solid;
 }
@@ -55,6 +72,7 @@ a {
 
 .tm-section-title {
   font-size: 3rem;
+  font-weight: 600;
 }
 
 .parallax-window {
@@ -68,9 +86,6 @@ a {
   height: auto;
   max-width: 1275px;
   padding: 66px 60px;
-}
-
-#intro {
   min-height: 100vh;
   max-width: none;
 }
@@ -147,11 +162,14 @@ a {
   margin-right: 0;
 }
 
-.tm-main-nav > li > a {
-  color: white;
+.tm-main-nav .nav-link {
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .tm-main-nav {
+  width: 100%;
   margin-bottom: 160px;
 }
 
@@ -168,6 +186,19 @@ a {
   padding-bottom: 12px;
 }
 
+.nav-link.active {
+  color: white;
+  border-right: 1px solid white;
+}
+
+.nav-link span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-link.active span:nth-child(2) {
+  opacity: 1;
+}
+
 .nav-link .tm-white-rect {
   opacity: 0;
   transition: all 0.3s ease;
@@ -176,6 +207,10 @@ a {
 .nav-link.current .tm-white-rect,
 .nav-link:hover .tm-white-rect {
   opacity: 1;
+}
+
+.text-spacing-6 {
+  letter-spacing: 0.5rem;
 }
 
 .tm-social-links {
@@ -206,7 +241,7 @@ a {
 }
 
 .tm-footer-link:hover {
-  color: #F93;
+  color: #f93;
   text-decoration: none;
 }
 
@@ -487,7 +522,7 @@ figure.effect-bubba:hover p {
 }
 
 .tm-btn-primary {
-  color: #505050;
+  color: var(--secondary);
   border-bottom: 1px solid #cdcecf;
   padding: 10px 18px;
   position: relative;
@@ -549,7 +584,7 @@ figure.effect-bubba:hover p {
 
 @media (max-width: 991px) {
   .tm-sidebar-border-right {
-    border-right: #505050;
+    border-right: var(--secondary);
   }
 
   .tm-bg-black-transparent {
