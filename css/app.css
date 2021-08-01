@@ -199,6 +199,10 @@ a {
   opacity: 1;
 }
 
+.nav-link:hover {
+  color: white;
+}
+
 .nav-link .tm-white-rect {
   opacity: 0;
   transition: all 0.3s ease;
@@ -296,11 +300,6 @@ a {
   }
 }
 
-.tm-gallery-item {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .slick-dots {
   bottom: -50px;
 }
@@ -326,7 +325,7 @@ a {
   float: left;
   overflow: hidden;
   margin-bottom: 0;
-  background: #3085a3;
+  background: rgba(0, 0, 0, 0.5);
   text-align: center;
   cursor: pointer;
 }
@@ -399,7 +398,7 @@ a {
 /*---------------*/
 
 figure.effect-bubba {
-  background: #069;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 figure.effect-bubba img {
@@ -502,8 +501,8 @@ figure.effect-bubba:hover p {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 15px;
-  width: 240px;
-  height: 120px;
+  width: 100%;
+  height: auto;
 }
 
 .tm-contact-form-wrap {

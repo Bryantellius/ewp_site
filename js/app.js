@@ -4,43 +4,43 @@ $(document).ready(function () {
 
   // Carousel in Our Work section
   $(".tm-gallery").slick({
-    dots: true,
+    dots: false,
     infinite: false,
-    arrows: false,
+    arrows: true,
     speed: 300,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 1600,
         settings: {
-          arrows: false,
+          arrows: true,
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
         breakpoint: 1200,
         settings: {
-          arrows: false,
-          slidesToShow: 2,
+          arrows: true,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 991,
         settings: {
-          arrows: false,
-          slidesToShow: 3,
+          arrows: true,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 767,
         settings: {
-          arrows: false,
+          arrows: true,
           slidesToShow: 2,
           slidesToScroll: 1,
         },
@@ -48,7 +48,7 @@ $(document).ready(function () {
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
+          arrows: true,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -97,8 +97,14 @@ $(document).ready(function () {
       ele.addEventListener("click", (e) => toggleSideNavItem(e, ele))
     );
 
-  // Scroll by's for sections to label nav-links as active
   const screenHeight = window.innerHeight;
+
+  // Add active label upon load
+  document
+    .querySelectorAll(".nav-link")
+    [Math.floor(window.scrollY / screenHeight)].classList.add("active");
+
+  // Scroll by's for sections to label nav-links as active
   window.addEventListener("scroll", () => {
     const i = Math.floor(window.scrollY / screenHeight);
     document.querySelectorAll(".nav-link").forEach((ele, idx) => {
