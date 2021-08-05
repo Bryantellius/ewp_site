@@ -79,6 +79,8 @@ a {
   background-color: var(--primary);
 }
 
+
+
 .tm-intro {
   max-width: 600px;
   width: 100%;
@@ -214,8 +216,13 @@ a {
   opacity: 1;
 }
 
+.nav-link:hover span:nth-child(2) {
+  opacity: 1;
+}
+
 .nav-link:hover {
   color: white;
+  border-right: 1px solid white;
 }
 
 .nav-link .tm-white-rect {
@@ -416,13 +423,14 @@ figure.effect-bubba {
   background: rgba(0, 0, 0, 0.5);
 }
 
-figure.effect-bubba img {
+figure.effect-bubba video {
   opacity: 1;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
+  height: 250px;
 }
 
-figure.effect-bubba:hover img {
+figure.effect-bubba:hover video {
   opacity: 0.4;
 }
 
@@ -567,9 +575,26 @@ figure.effect-bubba:hover p {
   height: 100%;
 }
 
+label {
+  color: white;
+  font-size: 0.85rem;
+}
+
+.form-control {
+  background-color: transparent;
+  border-bottom: .5px solid var(--secondary);
+  border-radius: 0px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: white;
+}
+
 .form-control:focus {
+  background-color: transparent;
   outline: none;
   box-shadow: none;
+  color: white;
 }
 
 @media (max-width: 1600px) {

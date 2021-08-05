@@ -15,7 +15,7 @@ $(document).ready(function () {
         breakpoint: 1600,
         settings: {
           arrows: true,
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -25,7 +25,7 @@ $(document).ready(function () {
         breakpoint: 1200,
         settings: {
           arrows: true,
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -62,7 +62,13 @@ $(document).ready(function () {
   // Image Pop Up
   $(".tm-gallery").magnificPopup({
     delegate: "a", // child items selector, by clicking on it popup will open
-    type: "image",
+    type: "iframe",
+    gallery: { enabled: true },
+  });
+
+  $(".tm-intro").magnificPopup({
+    delegate: "a", // child items selector, by clicking on it popup will open
+    type: "iframe",
     gallery: { enabled: true },
   });
 
