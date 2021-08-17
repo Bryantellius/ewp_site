@@ -79,7 +79,9 @@ a {
   background-color: var(--primary);
 }
 
-
+.opacity-6 {
+  opacity: 0.5;
+}
 
 .tm-intro {
   max-width: 600px;
