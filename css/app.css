@@ -83,6 +83,10 @@ a {
   opacity: 0.5;
 }
 
+.half-card {
+  min-height: 100px;
+}
+
 .tm-intro {
   max-width: 600px;
   width: 100%;
