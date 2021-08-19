@@ -5,7 +5,7 @@ $(document).ready(function () {
   // Carousel in Our Work section
   $(".tm-gallery").slick({
     dots: false,
-    infinite: false,
+    infinite: true,
     arrows: true,
     speed: 300,
     slidesToShow: 3,
