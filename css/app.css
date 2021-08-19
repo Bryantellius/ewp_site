@@ -83,6 +83,10 @@ a {
   opacity: 0.5;
 }
 
+.grayscale {
+  filter: grayscale(1);
+}
+
 .half-card {
   min-height: 100px;
 }
@@ -588,7 +592,7 @@ label {
 
 .form-control {
   background-color: transparent;
-  border-bottom: .5px solid var(--secondary);
+  border-bottom: 0.5px solid var(--secondary);
   border-radius: 0px;
   border-top: none;
   border-left: none;
