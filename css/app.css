@@ -79,20 +79,52 @@ a {
   background-color: var(--primary);
 }
 
+.bg-clip {
+  overflow: clip;
+  border: 0.25px solid gray;
+}
+
 .opacity-6 {
   opacity: 0.5;
 }
 
 .grayscale {
-  filter: grayscale(1);
+  filter: saturate(0%);
+}
+
+.img-container {
+  /* Used to position the overlay */
+  position: relative;
+}
+
+.img-container-overlay {
+  /* Position */
+  left: 0;
+  position: absolute;
+  top: 0;
+  color: white;
+  /* Take full size */
+  height: 100%;
+  width: 100%;
+
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  /* Add a dark background */
+  background-color: rgba(0, 0, 0, 0.65);
 }
 
 .mb-6 {
   margin-bottom: 3rem;
 }
+.mt-6 {
+  margin-top: 3rem;
+}
 
 .half-card {
-  min-height: 100px;
+  height: fit-content;
 }
 
 .tm-intro {
@@ -116,7 +148,7 @@ a {
   align-items: center;
   height: auto;
   max-width: 1275px;
-  padding: 4rem 3.8rem;
+  padding: 4rem 3.8rem 4rem 4.8rem;
   min-height: 100vh;
   max-width: none;
 }
@@ -287,7 +319,7 @@ a {
 }
 
 .tm-section-half {
-  padding: 3.6rem;
+  padding: 3.6rem 4.6rem;
 }
 
 .tm-section-icon {
