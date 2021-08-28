@@ -95,6 +95,14 @@ a {
 .img-container {
   /* Used to position the overlay */
   position: relative;
+  max-height: 160px;
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .img-container-overlay {
@@ -751,14 +759,19 @@ label {
 }
 
 @media (max-width: 767px) {
-  .tm-section {
+  .tm-section,
+  .tm-section-half,
+  .tm-intro {
     padding: 30px;
+  }
+  .d-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 554px) {
   .tm-section {
-    padding: 15px;
+    padding: 30px;
   }
 }
 
