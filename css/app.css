@@ -3,10 +3,11 @@
   --secondary: #646674;
   --gray: #323337;
   --dark: #212126;
+  --font-family: "Century Gothic Regular", Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: "Century Gothic Regular", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 400;
   overflow-x: hidden;
@@ -127,7 +128,6 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
-  
 }
 
 .img-container-overlay {
