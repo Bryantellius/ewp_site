@@ -1,14 +1,34 @@
 console.log("Script Attached");
 
-const iframeLinks = [
-  "https://www.youtube.com/embed/UBJ5QDsHkBg",
-  "https://www.youtube.com/embed/EbI0sTNdE-o",
-  "https://www.youtube.com/embed/HjzPdJBZylI",
-  "https://www.youtube.com/embed/YK5Qtrm2xDI",
-  "https://www.youtube.com/embed/ZJSfM91L3R8",
-  "https://www.youtube.com/embed/lS301BBNqt4",
-  "https://www.youtube.com/embed/YdEsfPeSxy8",
+const assets = [
+  {
+    video: "https://www.youtube.com/embed/UBJ5QDsHkBg",
+    img: "./img/thumbnails/apex.png",
+  },
+  {
+    video: "https://www.youtube.com/embed/EbI0sTNdE-o",
+    img: "./img/thumbnails/opps1.png",
+  },
+  {
+    video: "https://www.youtube.com/embed/HjzPdJBZylI",
+    img: "./img/thumbnails/hkt.png",
+  },
+  { video: "https://www.youtube.com/embed/YK5Qtrm2xDI", img: "" },
+  { video: "https://www.youtube.com/embed/ZJSfM91L3R8", img: "" },
+  { video: "https://www.youtube.com/embed/lS301BBNqt4", img: "" },
+  { video: "https://www.youtube.com/embed/YdEsfPeSxy8", img: "" },
 ];
+
+let lastVidIdx = 0;
+let items = document.querySelectorAll(".videoItem");
+for (let item = 0; item < 3; item++) {
+  if (item == 1) {
+    items[item].src = assets[lastVidIdx].video;
+  } else {
+    items[item].src = assets[lastVidIdx].img;
+  }
+  lastVidIdx++;
+}
 
 function toggleSideNavItem(e, ele) {
   document
