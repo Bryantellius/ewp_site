@@ -25,7 +25,7 @@ body {
 .containerSidebar {
   border-right: 0.01px solid #aaa;
   width: 100%;
-  z-index: 10;
+  z-index: 9999;
   position: absolute;
   left: -100%;
   display: grid;
@@ -48,33 +48,114 @@ body {
   position: relative;
   /* Make it scrollable */
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 a {
   transition: all 0.3s ease;
 }
 
-#our-work {
+.mt-185 {
+  margin-top: 185px;
+}
+
+.h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+#showreelBtn,
+#submitBtn {
+  background-color: transparent;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: #eee;
+  border: 1px solid #aaa;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.sectionTitle {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 0.85rem;
+}
+
+#home {
+  background-image: url(../img/backgrounds/welcome-eagle.png);
+  background-size: cover;
+  background-position: 80% 0%;
+  background-repeat: no-repeat;
+}
+
+#ourWork {
   background-image: url(../img/backgrounds/our-work.png);
-  background-size: contain;
+  background-size: cover;
+  background-position: 80% 0%;
   background-repeat: no-repeat;
 }
 
-#what-we-do {
+/* SERVICES */
+.servicesContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px 10px;
+}
+
+.services {
+  border-radius: 5px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.services:nth-child(1) {
+  background-image: url(../img/gallery/video-production.jpeg);
+  background-size: cover;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+}
+.services:nth-child(2) {
+  background-image: url(../img/gallery/corporate-video.jpeg);
+  background-size: cover;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+}
+.services:nth-child(3) {
+  background-image: url(../img/gallery/commercials.jpeg);
+  background-size: cover;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+}
+.services:nth-child(4) {
+  background-image: url(../img/gallery/custom-request.jpeg);
+  background-size: cover;
+  background-position: 0% 20%;
+  background-repeat: no-repeat;
+}
+/* END SERVICES */
+
+#whatWeDo {
   background-image: url(../img/backgrounds/what-we-do.png);
-  background-size: contain;
+  background-size: cover;
+  background-position: 80% 0%;
   background-repeat: no-repeat;
 }
 
-#our-team {
+#ourTeam {
   background-image: url(../img/backgrounds/our-team.png);
-  background-size: contain;
+  background-size: cover;
+  background-position: 80% 0%;
   background-repeat: no-repeat;
 }
 
-#contact {
+#contactUs {
   background-image: url(../img/backgrounds/what-we-do.png);
-  background-size: contain;
+  background-size: cover;
+  background-position: 80% 0%;
   background-repeat: no-repeat;
 }
 
@@ -107,13 +188,16 @@ a {
 
 .bg-clip {
   overflow: clip;
-  border: 0.25px solid gray;
 }
 
 /* NAVS */
 .nav-link {
   font-weight: 400;
   font-size: 14px;
+}
+
+.nav-link:hover {
+  color: white;
 }
 
 /* TOPNAV */
@@ -127,6 +211,12 @@ a {
   display: flex;
   list-style: none;
   padding: 0;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+#topNav > ul:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #topNav .nav-link {
@@ -165,8 +255,17 @@ a {
   padding-bottom: 0px;
 }
 
+#sideNavLinks .nav-link:hover {
+  border-right: 2px solid #eee;
+}
+
 #sideNavLinks a > span:nth-child(2) {
   opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#sideNavLinks a > span:nth-child(2):hover {
+  opacity: 1;
 }
 
 #sideNavLinks .active {
@@ -177,9 +276,69 @@ a {
   opacity: 1;
 }
 
+/* END SIDENAV */
+
+/* SOCIAL MEDIA ICONS */
+#socialMediaContainer {
+  position: fixed;
+  right: 3rem;
+  display: none;
+  height: 100%;
+}
+
+#socialMediaContainer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20%;
+  padding: 0.5rem;
+  z-index: 9999;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+#socialMediaContainer ul:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* END NAVS */
+
+/* CONTACT FORM */
+.form .form-control {
+  background-color: transparent;
+  color: #eee;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #aaa;
+}
+
+.form .form-control:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #fff;
+}
+
+.form .form-control:hover {
+  border-color: #fff;
+}
+
+.form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+/* END CONTACT FORM */
+
+/* MEDIA QUERIES */
+
 @media screen and (min-width: 768px) {
   .containerSidebar {
     width: 20%;
+    max-width: 200px;
     position: initial;
   }
   #topNav {
@@ -187,5 +346,17 @@ a {
     justify-content: flex-end;
     align-items: center;
     width: calc(100% - 25%);
+  }
+  #socialMediaContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .servicesContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    z-index: -1;
   }
 }

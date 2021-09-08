@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <script src="js/app.js" defer></script>
@@ -68,12 +72,153 @@
             <li><a href="#contactUs" class="nav-link">Contact</a></li>
           </ul>
         </nav>
+        <aside id="socialMediaContainer">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/eaglewingproductions"
+                ><i class="fa fa-instagram color-primary"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/eaglewingvideoproductions"
+                ><i class="fa fa-facebook-f text-secondary"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#linkedin"
+                ><i class="fa fa-linkedin text-secondary"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/eaglewingprog"
+                ><i class="fa fa-twitter text-secondary"></i
+              ></a>
+            </li>
+          </ul>
+        </aside>
         <div class="sectionContainer">
-          <section class="section">Landing Page</section>
-          <section class="section">Our Work</section>
-          <section class="section">What We Do</section>
-          <section class="section">Our Team</section>
-          <section class="section">Contact Us</section>
+          <section id="home" class="section">
+            <div class="container d-flex h-100 align-items-center">
+              <div class="col-md-8">
+                <h6 class="sectionTitle">Welcome</h6>
+                <h1 class="h1 text-light">
+                  Hello!<br />
+                  We Are Eagle Wing
+                </h1>
+                <p>
+                  We are a video production company. We do a lot of corporate
+                  work but hope to eventually branch out tom ore commercial
+                  clints.
+                </p>
+                <button id="showreelBtn">
+                  <span class="m-3">Watch our Showreel</span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-play m-3 background-primary"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section id="ourWork" class="section">Our Work</section>
+          <section id="whatWeDo" class="section">
+            <div
+              class="
+                container
+                d-flex
+                h-100
+                justify-content-center
+                align-items-center
+              "
+            >
+              <div class="row w-100 p-2">
+                <div class="col-lg-5">
+                  <h6 class="sectionTitle">Services</h6>
+                  <h2 class="h1 text-light">What We Do</h2>
+                  <p>
+                    We use our years of experience and industry leading talent
+                    to craft a unique cinematic story for your company.
+                  </p>
+                </div>
+                <div class="col-lg-7 servicesContainer">
+                  <div class="services d-flex align-items-center justify-content-stretch p-2"><p>Video Production</p></div>
+                  <div class="services d-flex align-items-center justify-content-stretch p-2"><p>Corporate Video</p></div>
+                  <div class="services d-flex align-items-center justify-content-stretch p-2"><p>Commercials</p></div>
+                  <div class="services d-flex align-items-center justify-content-stretch p-2"><p>Custom Request</p></div>
+                </div>
+                <div class="col-12 mt-185">
+                  <h6 class="sectionTitle">People Trust Us</h6>
+                  <img
+                    src="./img/clients/all-clients.png"
+                    alt="Clients that trust us"
+                    class="img-fluid my-3"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="ourTeam" class="section">Our Team</section>
+          <section id="contactUs" class="section">
+            <div
+              class="
+                container
+                justify-content-center
+                d-flex
+                h-100
+                align-items-center
+              "
+            >
+              <div class="row w-100 p-2">
+                <div class="col-lg-7">
+                  <h6 class="sectionTitle">Contact</h6>
+                  <h2 class="text-light h1">
+                    We would love<br />
+                    to hear from you
+                  </h2>
+                  <p>We can't wait to hear from you!</p>
+                </div>
+                <div class="col-lg-5">
+                  <form class="form">
+                    <div class="form-group">
+                      <label for="name">Your Name</label
+                      ><input type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Your Email</label
+                      ><input type="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        id="message"
+                        cols="30"
+                        rows="3"
+                      ></textarea>
+                      <button
+                        id="submitBtn"
+                        class="my-3 p-3 d-block mx-auto w-50"
+                        type="submit"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </div>
