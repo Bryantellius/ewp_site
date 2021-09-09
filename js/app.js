@@ -13,22 +13,80 @@ const assets = [
     video: "https://www.youtube.com/embed/HjzPdJBZylI",
     img: "./img/thumbnails/hkt.png",
   },
-  { video: "https://www.youtube.com/embed/YK5Qtrm2xDI", img: "" },
-  { video: "https://www.youtube.com/embed/ZJSfM91L3R8", img: "" },
-  { video: "https://www.youtube.com/embed/lS301BBNqt4", img: "" },
-  { video: "https://www.youtube.com/embed/YdEsfPeSxy8", img: "" },
+  {
+    video: "https://www.youtube.com/embed/YK5Qtrm2xDI",
+    img: "./img/thumbnails/formetco.png",
+  },
+  {
+    video: "https://www.youtube.com/embed/ZJSfM91L3R8",
+    img: "./img/thumbnails/opps2.png",
+  },
+  {
+    video: "https://www.youtube.com/embed/lS301BBNqt4",
+    img: "./img/thumbnails/cuisine.png",
+  },
+  {
+    video: "https://www.youtube.com/embed/YdEsfPeSxy8",
+    img: "./img/thumbnails/barcc.png",
+  },
 ];
 
-let lastVidIdx = 0;
+let currVidIdx = 0;
 let items = document.querySelectorAll(".videoItem");
-for (let item = 0; item < 3; item++) {
-  if (item == 1) {
-    items[item].src = assets[lastVidIdx].video;
+
+function cycleVideos(dir) {
+  if (currVidIdx == 0 && dir == -1) {
+    currVidIdx = assets.length - 1;
+  } else if (currVidIdx == assets.length - 1 && dir == 1) {
+    currVidIdx = 0;
   } else {
-    items[item].src = assets[lastVidIdx].img;
+    currVidIdx += dir;
   }
-  lastVidIdx++;
+
+  for (let item of items) {
+    item.classList.add("dim");
+    setTimeout(() => {
+      item.classList.remove("dim");
+    }, 500);
+  }
+
+  if (currVidIdx == 0) {
+    items[0].src = assets[assets.length - 1].img;
+    items[2].src = assets[currVidIdx + 1].img;
+  } else if (currVidIdx == assets.length - 1) {
+    items[0].src = assets[currVidIdx - 1].img;
+    items[2].src = assets[0].img;
+  } else {
+    items[0].src = assets[currVidIdx - 1].img;
+    items[2].src = assets[currVidIdx + 1].img;
+  }
+
+  items[1].src = assets[currVidIdx].video;
 }
+
+// TOGGLE SIDENAV
+let isExpanded = false;
+document.querySelector(".menuIcon").addEventListener("click", toggleSideNav);
+
+function toggleSideNav(close = false) {
+  if (window.innerWidth < 768) {
+    isExpanded = !isExpanded;
+
+    if (isExpanded) {
+      document.querySelector(".containerSidebar").style.left = "0";
+    } else {
+      document.querySelector(".containerSidebar").style.left = "-100%";
+    }
+  }
+}
+
+// EVENT LISTENER FOR PREV AND NEXT VIDEO CYCLE BUTTONS
+document.querySelector("#arrowLeft").addEventListener("click", () => {
+  cycleVideos(-1);
+});
+document.querySelector("#arrowRight").addEventListener("click", () => {
+  cycleVideos(1);
+});
 
 function toggleSideNavItem(e, ele) {
   document
@@ -38,11 +96,12 @@ function toggleSideNavItem(e, ele) {
 }
 
 // Load nav-links with click listeners to label active
-document
-  .querySelectorAll(".nav-link")
-  .forEach((ele) =>
-    ele.addEventListener("click", (e) => toggleSideNavItem(e, ele))
-  );
+document.querySelectorAll(".nav-link").forEach((ele) =>
+  ele.addEventListener("click", (e) => {
+    toggleSideNavItem(e, ele);
+    toggleSideNav(true);
+  })
+);
 
 const screenHeight = window.innerHeight;
 
@@ -60,3 +119,5 @@ window.addEventListener("scroll", () => {
     else ele.classList.remove("active");
   });
 });
+
+// SHOWREEL POPUP

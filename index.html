@@ -20,6 +20,24 @@
   </head>
   <body>
     <div class="pageContainer">
+      <div class="menuIcon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-menu"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </div>
       <!-- Sidebar -->
       <aside class="containerSidebar">
         <div class="sideNavLogoContainer">
@@ -114,15 +132,15 @@
                   <span class="m-3">Watch our Showreel</span
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="30"
+                    height="30"
                     viewBox="0 0 24 24"
                     fill="white"
                     stroke="currentColor"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="feather feather-play m-3 background-primary"
+                    class="feather feather-play m-3"
                   >
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
@@ -145,14 +163,12 @@
                 <h2 class="h1 text-light">Some of Our Finest Work</h2>
                 <div class="videoContainer">
                   <img
-                    src="#"
+                    src="./img/thumbnails/barcc.png"
                     alt="Previous Thumbnail"
                     class="img-fluid videoItem grayscale"
                   />
                   <iframe
-                    src="#"
-                    height="100%"
-                    width="100%"
+                    src="https://www.youtube.com/embed/UBJ5QDsHkBg"
                     title="YouTube video player"
                     class="videoItem"
                     frameborder="0"
@@ -160,7 +176,7 @@
                     allowfullscreen
                   ></iframe>
                   <img
-                    src="#"
+                    src="./img/thumbnails/opps1.png"
                     alt="Next Thumbnail"
                     class="img-fluid videoItem grayscale"
                   />
@@ -176,7 +192,8 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="feather feather-arrow-left"
+                    class="feather arrow feather-arrow-left"
+                    id="arrowLeft"
                   >
                     <line x1="19" y1="12" x2="5" y2="12"></line>
                     <polyline points="12 19 5 12 12 5"></polyline>
@@ -191,7 +208,8 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="feather feather-arrow-right text-light"
+                    class="feather arrow feather-arrow-right text-light"
+                    id="arrowRight"
                   >
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
