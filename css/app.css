@@ -523,9 +523,10 @@ a {
     margin-bottom: 0;
   }
   #light {
-    left: 200px;
-    width: calc(100vw - 200px);
+    left: calc((100vw - 700px) / 2);
+    width: 700px;
     max-width: 100vw;
+    z-index: 99999;
   }
 }
 
