@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="shortcut icon" href="img/white-logo.png" type="image/x-icon" />
     <script src="js/app.js" defer></script>
   </head>
   <body>
@@ -128,7 +129,24 @@
                   work but hope to eventually branch out tom ore commercial
                   clints.
                 </p>
-                <button id="showreelBtn">
+                <div id="light">
+                  <a
+                    class="boxclose"
+                    id="boxclose"
+                    onclick="lightbox_close();"
+                  ></a>
+                  <iframe
+                    id="VisaChipCardVideo"
+                    src="https://www.youtube.com/embed/XI-QF2KLn-c"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+
+                <div id="fade" onclick="lightbox_close();"></div>
+                <button id="showreelBtn" onclick="lightbox_open();">
                   <span class="m-3">Watch our Showreel</span
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
