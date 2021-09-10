@@ -234,7 +234,7 @@ a {
 }
 
 #ourTeam {
-  background-image: url(../img/backgrounds/our-team.png);
+  /* background-image: url(../img/backgrounds/our-team.png); */
   background-size: cover;
   background-position: 80% 0%;
   background-repeat: no-repeat;
