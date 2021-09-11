@@ -135,12 +135,21 @@ function lightbox_open() {
   window.scrollTo(0, 0);
   document.getElementById("light").style.display = "block";
   document.getElementById("fade").style.display = "block";
-  lightBoxVideo.play();
 }
+
+var stopAllYouTubeVideos = () => {
+  var iframes = document.querySelectorAll("iframe");
+  Array.prototype.forEach.call(iframes, (iframe) => {
+    iframe.contentWindow.postMessage(
+      JSON.stringify({ event: "command", func: "stopVideo" }),
+      "*"
+    );
+  });
+};
 
 function lightbox_close() {
   var lightBoxVideo = document.getElementById("VisaChipCardVideo");
   document.getElementById("light").style.display = "none";
   document.getElementById("fade").style.display = "none";
-  lightBoxVideo.pause();
+  stopAllYouTubeVideos();
 }
