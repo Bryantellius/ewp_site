@@ -111,14 +111,19 @@ document
   [Math.floor(window.scrollY / screenHeight)].classList.add("active");
 
 // Scroll by's for sections to label nav-links as active
-window.addEventListener("scroll", () => {
-  const i = Math.floor(window.scrollY / screenHeight);
-  console.log(i);
-  document.querySelectorAll(".nav-link").forEach((ele, idx) => {
-    if (idx === i) ele.classList.add("active");
-    else ele.classList.remove("active");
-  });
-});
+window.addEventListener(
+  "scroll",
+  (e) => {
+    console.log(e);
+    const i = Math.floor(window.scrollY / screenHeight);
+    console.log(i);
+    document.querySelectorAll(".nav-link").forEach((ele, idx) => {
+      if (idx === i) ele.classList.add("active");
+      else ele.classList.remove("active");
+    });
+  },
+  false
+);
 
 // SHOWREEL POPUP
 window.document.onkeydown = function (e) {
