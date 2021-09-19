@@ -1,9 +1,16 @@
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: url('../webfonts/LouisGeorgeCafe.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primary: #be8f1a;
   --secondary: #848694;
   --gray: #323337;
   --dark: #212126;
-  --font-family: "Century Gothic Regular", Arial, Helvetica, sans-serif;
+  --font-family: "Louis George Cafe", Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -99,12 +106,13 @@ a {
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0;
-  transition: border-color 0.3s;
+  transition: border-color, background-color 0.3s;
 }
 
 #showreelBtn:hover,
 #submitBtn:hover {
   border-color: #fff;
+  background-color: var(--primary);
 }
 
 .sectionTitle {
@@ -311,6 +319,7 @@ a {
   position: fixed;
   top: 2rem;
   display: none;
+  z-index: 9999;
 }
 
 #topNav > ul {
@@ -332,12 +341,14 @@ a {
 /* SIDENAV */
 #sideNavLogo {
   max-width: 100px;
+  padding-left: 10px;
+  margin-top: 1.5rem;
 }
 
 .sideNavLogoContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #sideNavLinks > ul {
@@ -377,6 +388,7 @@ a {
   right: 3rem;
   display: none;
   height: 100%;
+  z-index: 9999;
 }
 
 #socialMediaContainer ul {
@@ -388,7 +400,6 @@ a {
   align-items: center;
   height: 20%;
   padding: 0.5rem;
-  z-index: 9999;
   transition: background-color 0.3s;
   border-radius: 5px;
 }
