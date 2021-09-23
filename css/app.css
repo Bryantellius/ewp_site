@@ -261,9 +261,9 @@ a {
 }
 
 #ourTeam {
-  /* background-image: url(../img/backgrounds/our-team.png); */
-  background-size: cover;
-  background-position: 80% 0%;
+  background-image: url(../img/backgrounds/AndrewEckhoff.png);
+  background-size: contain;
+  background-position: 90% 50%;
   background-repeat: no-repeat;
 }
 
