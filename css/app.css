@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Louis George Cafe';
-  src: url('../webfonts/LouisGeorgeCafe.ttf') format('truetype');
+  font-family: "Louis George Cafe";
+  src: url("../webfonts/LouisGeorgeCafe.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -331,10 +331,6 @@ a {
   border-radius: 5px;
 }
 
-#topNav > ul:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
 #topNav .nav-link {
   color: #eee;
 }
@@ -349,7 +345,14 @@ a {
 .sideNavLogoContainer {
   display: flex;
   justify-content: center;
+}
+
+.align-start {
   align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
 }
 
 #sideNavLinks > ul {
@@ -403,10 +406,6 @@ a {
   padding: 0.5rem;
   transition: background-color 0.3s;
   border-radius: 5px;
-}
-
-#socialMediaContainer ul:hover {
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* END NAVS */
