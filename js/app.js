@@ -3,31 +3,31 @@ console.log("Script Attached");
 const assets = [
   {
     video: "https://www.youtube.com/embed/UBJ5QDsHkBg",
-    img: "./img/thumbnails/apex.png",
+    img: "./img/thumbnails/apex-thumbnail.png",
   },
   {
     video: "https://www.youtube.com/embed/EbI0sTNdE-o",
-    img: "./img/thumbnails/opps1.png",
+    img: "./img/thumbnails/opps-thumbnail.png",
   },
   {
     video: "https://www.youtube.com/embed/HjzPdJBZylI",
-    img: "./img/thumbnails/hkt.png",
+    img: "./img/thumbnails/hkt-thumbnail.png",
   },
   {
     video: "https://www.youtube.com/embed/YK5Qtrm2xDI",
-    img: "./img/thumbnails/formetco.png",
+    img: "./img/thumbnails/formetco-thumbnail.png",
   },
   {
     video: "https://www.youtube.com/embed/ZJSfM91L3R8",
-    img: "./img/thumbnails/opps2.png",
-  },
-  {
-    video: "https://www.youtube.com/embed/lS301BBNqt4",
-    img: "./img/thumbnails/cuisine.png",
+    img: "./img/thumbnails/opps-technologies-thumbnail.png",
   },
   {
     video: "https://www.youtube.com/embed/YdEsfPeSxy8",
-    img: "./img/thumbnails/barcc.png",
+    img: "./img/thumbnails/cuisine-thumbnail.png",
+  },
+  {
+    video: "https://www.youtube.com/embed/lS301BBNqt4",
+    img: "./img/thumbnails/barcc-thumbnail.png",
   },
 ];
 
