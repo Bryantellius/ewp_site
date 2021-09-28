@@ -229,7 +229,7 @@ a {
 .services:nth-child(4) {
   background-image: url(../img/gallery/custom-request.jpeg);
   background-size: cover;
-  background-position: 0% 20%;
+  background-position: 0% 65%;
   background-repeat: no-repeat;
 }
 
@@ -260,11 +260,8 @@ a {
   background-repeat: no-repeat;
 }
 
-#ourTeam {
-  /* background-image: url(../img/backgrounds/our-team-final.png); */
-  background-size: contain;
-  background-position: 90% 50%;
-  background-repeat: no-repeat;
+.show-mobile {
+  display: block;
 }
 
 #contactUs {
@@ -575,6 +572,15 @@ a {
   }
   .videoContainer {
     grid-template-columns: 1fr 1.25fr 1fr;
+  }
+  #ourTeam {
+    background-image: url(../img/test.png);
+    background-size: 50%;
+    background-position: 90% 80%;
+    background-repeat: no-repeat;
+  }
+  .show-mobile {
+    display: none;
   }
 }
 
