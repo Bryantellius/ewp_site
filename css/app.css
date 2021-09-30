@@ -13,6 +13,10 @@
   --font-family: "Louis George Cafe", Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   font-size: 18px;
