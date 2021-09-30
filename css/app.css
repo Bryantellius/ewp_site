@@ -35,23 +35,23 @@ h6 {
 
 .pageContainer {
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .containerSidebar {
   border-right: 0.01px solid #aaa;
   width: 100%;
   z-index: 9999;
-  position: absolute;
+  position: fixed;
   left: -100%;
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
   background-color: rgba(0, 0, 0, 0.9);
-  height: 100%;
+  height: 100vh;
 }
 
 .sectionContainer {
-  height: 100%;
+  height: 100vh;
 }
 
 .section {
@@ -78,9 +78,6 @@ h6 {
   /* Take the remaining width */
   flex: 1;
   position: relative;
-  /* Make it scrollable */
-  overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -513,11 +510,16 @@ a {
   .menuIcon {
     display: none;
   }
+  .containerMain {
+    margin-left: 20%;
+  }
   .containerSidebar {
     width: 20%;
     max-width: 200px;
-    position: initial;
-    background-color: transparent;
+    position: fixed;
+    left: 0%;
+    z-index: 9999;
+    background-color: var(--dark);
     font-size: inherit;
   }
   #topNav {
