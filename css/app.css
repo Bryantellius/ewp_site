@@ -259,7 +259,7 @@ a {
 
 #whatWeDo {
   background-image: url(../img/backgrounds/what-we-do.png);
-  background-size: cover;
+  background-size: contain;
   background-position: 80% 0%;
   background-repeat: no-repeat;
 }
@@ -512,7 +512,8 @@ a {
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
-  #whatWeDo, #ourTeam {
+  #whatWeDo,
+  #ourTeam {
     height: fit-content;
   }
   .menuIcon {
@@ -573,7 +574,8 @@ a {
 }
 
 @media screen and (min-width: 992px) {
-  #whatWeDo, #ourTeam {
+  #whatWeDo,
+  #ourTeam {
     height: 70%;
   }
   .servicesContainer {
@@ -590,7 +592,8 @@ a {
   #ourTeamImg {
     position: absolute;
     left: 0;
-    top: -120px;
+    top: -185px;
+    max-width: 120%;
   }
   /* #ourTeam {
     background-image: url(../img/take1ourteam.png);
