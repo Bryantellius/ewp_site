@@ -158,3 +158,10 @@ function lightbox_close() {
   document.getElementById("fade").style.display = "none";
   stopAllYouTubeVideos();
 }
+
+// CONTACT FORM
+document.querySelector("form").addEventListener("submit", (e) => {
+  let alertBox = document.querySelector(".alert");
+  alertBox.classList.remove("d-none");
+  setTimeout(() => alertBox.classList.add("d-none"), 4000);
+});
