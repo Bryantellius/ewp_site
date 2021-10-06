@@ -140,6 +140,7 @@ a {
   height: 100%;
   z-index: -1;
   border: 3px solid rgb(33, 33, 37);
+  background-color: var(--dark);
 }
 
 /* OUR WORK */
@@ -266,9 +267,9 @@ a {
 
 #servicesEagle {
   position: absolute;
-  right: -120px;
-  top: -245px;
-  max-width: 230%;
+  right: -140px;
+  top: -320px;
+  max-width: 280%;
 }
 
 .show-mobile {
