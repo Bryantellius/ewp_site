@@ -597,8 +597,8 @@ a {
   #ourTeamImg {
     position: absolute;
     left: 0;
-    top: -200px;
-    max-width: 120%;
+    top: -215px;
+    max-width: 125%;
   }
   /* #ourTeam {
     background-image: url(../img/take1ourteam.png);
