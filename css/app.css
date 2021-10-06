@@ -259,17 +259,14 @@ a {
 /* END SERVICES */
 
 /* #whatWeDo {
-  background-image: url(../img/backgrounds/what-we-do.png);
-  background-size: contain;
-  background-position: 80% 0%;
-  background-repeat: no-repeat;
+  position: relative;
 } */
 
 #servicesEagle {
   position: absolute;
   right: -140px;
-  top: -320px;
-  max-width: 280%;
+  top: -340px;
+  max-width: 290%;
 }
 
 .show-mobile {
