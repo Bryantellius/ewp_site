@@ -67,9 +67,9 @@ h6 {
   width: 100%;
 }
 
-.no-x {
+/* .no-x {
   overflow-x: hidden;
-}
+} */
 
 .menuIcon {
   position: absolute;
@@ -257,11 +257,18 @@ a {
 }
 /* END SERVICES */
 
-#whatWeDo {
+/* #whatWeDo {
   background-image: url(../img/backgrounds/what-we-do.png);
   background-size: contain;
   background-position: 80% 0%;
   background-repeat: no-repeat;
+} */
+
+#servicesEagle {
+  position: absolute;
+  right: -120px;
+  top: -245px;
+  max-width: 230%;
 }
 
 .show-mobile {
@@ -592,7 +599,7 @@ a {
   #ourTeamImg {
     position: absolute;
     left: 0;
-    top: -185px;
+    top: -200px;
     max-width: 120%;
   }
   /* #ourTeam {
