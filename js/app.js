@@ -162,7 +162,7 @@ function lightbox_close() {
 // CONTACT FORM
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
-  let myForm = document.getElementById("pizzaOrder");
+  let myForm = document.querySelector("form");
   let formData = new FormData(myForm);
   fetch("/", {
     method: "POST",
