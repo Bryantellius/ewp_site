@@ -108,15 +108,14 @@ const screenHeight = window.innerHeight;
 // Add active label upon load
 document
   .querySelectorAll(".nav-link")
-  [Math.floor(window.scrollY / screenHeight)].classList.add("active");
+  [Math.floor(window.scrollY / (screenHeight * .70))].classList.add("active");
 
 // Scroll by's for sections to label nav-links as active
 window.addEventListener(
   "scroll",
   (e) => {
-    console.log(e);
-    const i = Math.floor(window.scrollY / screenHeight);
-    console.log(i);
+    const i = Math.floor(window.scrollY / (screenHeight * .70));
+    console.log(window.scrollY, i);
     document.querySelectorAll(".nav-link").forEach((ele, idx) => {
       if (idx === i) ele.classList.add("active");
       else ele.classList.remove("active");
