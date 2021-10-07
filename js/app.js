@@ -158,3 +158,25 @@ function lightbox_close() {
   document.getElementById("fade").style.display = "none";
   stopAllYouTubeVideos();
 }
+
+// CONTACT FORM
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  let myForm = document.querySelector("form");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      console.log("Form successfully submitted");
+      let alertBox = document.querySelector(".alert");
+      document.querySelector("#name").value = "";
+      document.querySelector("#email").value = "";
+      document.querySelector("#message").value = "";
+      alertBox.classList.remove("d-none");
+      setTimeout(() => alertBox.classList.add("d-none"), 4000);
+    })
+    .catch((error) => alert(error));
+});

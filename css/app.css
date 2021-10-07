@@ -445,6 +445,19 @@ a {
   font-size: 0.85rem;
   font-weight: 600;
 }
+
+.alert {
+  position: fixed;
+  text-align: center;
+  top: 2rem;
+  max-width: 600px;
+  min-width: 300px;
+  left: 20%;
+}
+
+.d-none {
+  display: none;
+}
 /* END CONTACT FORM */
 
 /* LIGHTBOX */
