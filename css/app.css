@@ -138,8 +138,8 @@ a {
 
 #myVideo {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -15px;
+  top: -215px;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -534,6 +534,10 @@ a {
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
+  #myVideo {
+    right: 0;
+    top: 0;
+  }
   #whatWeDo,
   #ourTeam {
     height: fit-content;
