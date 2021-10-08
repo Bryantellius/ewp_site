@@ -264,9 +264,9 @@ a {
 
 #servicesEagle {
   position: absolute;
-  right: -140px;
+  right: 0;
   top: -340px;
-  max-width: 290%;
+  max-width: 100%;
 }
 
 .show-mobile {
@@ -533,6 +533,12 @@ a {
   #whatWeDo,
   #ourTeam {
     height: fit-content;
+  }
+  #servicesEagle {
+    position: absolute;
+    right: -140px;
+    top: -340px;
+    max-width: 290%;
   }
   .menuIcon {
     display: none;
