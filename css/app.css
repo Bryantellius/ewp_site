@@ -594,7 +594,7 @@ a {
 @media screen and (min-width: 992px) {
   #whatWeDo,
   #ourTeam {
-    height: 70%;
+    height: 100%;
   }
   .servicesContainer {
     grid-template-columns: 1fr 1fr;
