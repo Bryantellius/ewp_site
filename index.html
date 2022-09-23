@@ -2,11 +2,18 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PT353Z7');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PT353Z7");
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +21,10 @@
 
     <title>Eagle Wing Productions</title>
     <meta property="og:title" content="Eagle Wing Productions" />
-    <meta property="og:description" content="We are a video production company that strives for excellence in cinematic execution." />
+    <meta
+      property="og:description"
+      content="We are a video production company that strives for excellence in cinematic execution."
+    />
     <meta property="og:image" content="img/black-logo.png" />
     <link
       rel="stylesheet"
@@ -24,17 +34,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="shortcut icon" href="img/black-logo.png" type="image/x-icon" />
-    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="shortcut icon" href="./img/black-logo.png" type="image/x-icon" />
+    <script src="./js/app.js" defer></script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT353Z7"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PT353Z7"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <div class="pageContainer">
       <div class="menuIcon">
         <svg
@@ -144,8 +160,10 @@
                   We Are Eagle Wing
                 </h1>
                 <p class="maxw-550">
-                  We are a video production company<br> that strives for excellence in cinematic execution.</p>
-                <div id="light">
+                  We are a video production company<br />
+                  that strives for excellence in cinematic execution.
+                </p>
+                <!-- <div id="light">
                   <a
                     class="boxclose"
                     id="boxclose"
@@ -159,10 +177,14 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
-                </div>
+                </div> -->
 
                 <div id="fade" onclick="lightbox_close();"></div>
-                <button id="showreelBtn" onclick="lightbox_open();">
+                <a
+                  id="showreelBtn"
+                  href="https://www.youtube.com/watch?v=-Jz1wsT7y9s"
+                  target="_blank"
+                >
                   <span class="m-3">Watch our Showreel</span
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -178,22 +200,16 @@
                   >
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
-                </button>
+                </a>
               </div>
               <video autoplay muted loop id="myVideo">
-                <source src="./img/vids/Final.mov" type="video/mp4"></source>
+                <source src="./img/vids/Final.mov" type="video/mp4" />
               </video>
             </div>
           </section>
           <section id="ourWork" class="section">
             <div
-              class="
-                container-fluid
-                d-flex
-                justify-content-center
-                align-items-center
-                h-100
-              "
+              class="container-fluid d-flex justify-content-center align-items-center h-100"
             >
               <div class="text-center w-100 p-2">
                 <h6 class="sectionTitle">Our Work</h6>
@@ -257,64 +273,35 @@
           </section>
           <section id="whatWeDo" class="section">
             <div
-              class="
-                container
-                d-flex
-                h-100
-                justify-content-center
-                align-items-center
-              "
+              class="container d-flex h-100 justify-content-center align-items-center"
             >
               <div class="row w-100 p-2 no-x">
                 <div class="col-lg-5">
                   <h6 class="sectionTitle">Services</h6>
                   <h2 class="h1 text-light">What We Do</h2>
                   <p>
-                    Using our years of experience and industry leading talent we craft unique cinematic stories for your company.
+                    Using our years of experience and industry leading talent we
+                    craft unique cinematic stories for your company.
                   </p>
                 </div>
                 <div class="col-lg-7 servicesContainer">
                   <div
-                    class="
-                      services
-                      d-flex
-                      align-items-center
-                      justify-content-stretch
-                      p-2
-                    "
+                    class="services d-flex align-items-center justify-content-stretch p-2"
                   >
                     <p>Video Production</p>
                   </div>
                   <div
-                    class="
-                      services
-                      d-flex
-                      align-items-center
-                      justify-content-stretch
-                      p-2
-                    "
+                    class="services d-flex align-items-center justify-content-stretch p-2"
                   >
                     <p>Custom Request</p>
                   </div>
                   <div
-                    class="
-                      services
-                      d-flex
-                      align-items-center
-                      justify-content-stretch
-                      p-2
-                    "
+                    class="services d-flex align-items-center justify-content-stretch p-2"
                   >
                     <p>Corporate Video</p>
                   </div>
                   <div
-                    class="
-                      services
-                      d-flex
-                      align-items-center
-                      justify-content-stretch
-                      p-2
-                    "
+                    class="services d-flex align-items-center justify-content-stretch p-2"
                   >
                     <p>Commercials</p>
                   </div>
@@ -329,13 +316,25 @@
                   <h6 class="sectionTitle">People That Trust Us</h6>
                   <div class="clientsContainer row">
                     <div class="col-md-4 my-3">
-                      <img src="./img/clients/updated-clients-sm.png" alt="" class="img-fluid" />
+                      <img
+                        src="./img/clients/updated-clients-sm.png"
+                        alt=""
+                        class="img-fluid"
+                      />
                     </div>
                     <div class="col-md-4 my-3">
-                      <img src="./img/clients/updated-clients-sm2.png" alt="" class="img-fluid" />
+                      <img
+                        src="./img/clients/updated-clients-sm2.png"
+                        alt=""
+                        class="img-fluid"
+                      />
                     </div>
                     <div class="col-md-4 my-3">
-                      <img src="./img/clients/updated-clients-sm3.png" alt="" class="img-fluid" />
+                      <img
+                        src="./img/clients/updated-clients-sm3.png"
+                        alt=""
+                        class="img-fluid"
+                      />
                     </div>
                   </div>
                 </div>
@@ -344,25 +343,23 @@
           </section>
           <section id="ourTeam" class="section">
             <div
-              class="
-                container
-                justify-content-center
-                d-flex
-                h-100
-                align-items-center
-              "
+              class="container justify-content-center d-flex h-100 align-items-center"
             >
               <div class="row w-100 p-2">
                 <div class="col-lg-6">
                   <h6 class="sectionTitle">Who We Are</h6>
                   <h2 class="text-light h1">Our Team</h2>
                   <p>
-                    We draw upon top freelance talent. These industry leading professionals take pride in what they do. Experts in VFX, Editing, Audio, Lighting, Griping, and Scriptwriting round out our team. Their passionate approach to the production process produces results that are unmatched.
+                    We draw upon top freelance talent. These industry leading
+                    professionals take pride in what they do. Experts in VFX,
+                    Editing, Audio, Lighting, Griping, and Scriptwriting round
+                    out our team. Their passionate approach to the production
+                    process produces results that are unmatched.
                   </p>
                 </div>
                 <div class="col-lg-6 p-0 text-center">
                   <img
-                  id="ourTeamImg"
+                    id="ourTeamImg"
                     src="./img/take3ourteam.png"
                     alt="Andrew Eckhoff, CEO"
                     class="img-fluid"
@@ -373,13 +370,7 @@
           </section>
           <section id="contactUs" class="section">
             <div
-              class="
-                container
-                justify-content-center
-                d-flex
-                h-100
-                align-items-center
-              "
+              class="container justify-content-center d-flex h-100 align-items-center"
             >
               <div class="row w-100 p-2">
                 <div class="col-lg-7">
@@ -397,11 +388,21 @@
                   <form action="/" class="form" name="contact" netlify>
                     <div class="form-group">
                       <label for="name">Your Name</label
-                      ><input id="name" name="name" type="text" class="form-control" />
+                      ><input
+                        id="name"
+                        name="name"
+                        type="text"
+                        class="form-control"
+                      />
                     </div>
                     <div class="form-group">
                       <label for="email">Your Email</label
-                      ><input id="email" name="email" type="email" class="form-control" />
+                      ><input
+                        id="email"
+                        name="email"
+                        type="email"
+                        class="form-control"
+                      />
                     </div>
                     <div class="form-group">
                       <label for="message">Message</label>

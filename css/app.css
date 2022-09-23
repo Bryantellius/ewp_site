@@ -38,6 +38,11 @@ h6 {
   font-family: "Century Gothic Bold", Arial, Helvetica, sans-serif;
 }
 
+a#showreelBtn {
+  display: inline-block;
+  font-size: inherit;
+}
+
 .maxw-550 {
   max-width: 550px;
 }
