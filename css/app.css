@@ -550,6 +550,7 @@ a {
 @media screen and (min-width: 768px) {
   .flex-item {
     flex: 1 1;
+    max-width: 50px;
   }
 
   .topbuffer {
@@ -557,6 +558,7 @@ a {
   }
   /* FOOTER */
   footer {
+    font-size: 12px;
     position: fixed;
     bottom: 1rem;
     right: 3rem;
