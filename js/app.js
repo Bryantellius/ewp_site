@@ -68,7 +68,7 @@ function cycleVideos(dir) {
 let isExpanded = false;
 document.querySelector(".menuIcon").addEventListener("click", toggleSideNav);
 
-function toggleSideNav(close = false) {
+function toggleSideNav() {
   if (window.innerWidth < 768) {
     isExpanded = !isExpanded;
 
