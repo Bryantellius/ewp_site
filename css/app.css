@@ -38,6 +38,10 @@ h6 {
   font-family: "Century Gothic Bold", Arial, Helvetica, sans-serif;
 }
 
+.bolded {
+  font-weight: 700;
+}
+
 a#showreelBtn {
   display: inline-block;
   font-size: inherit;
