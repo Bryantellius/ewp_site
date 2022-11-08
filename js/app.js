@@ -2,6 +2,22 @@ console.log("Script Attached");
 
 const assets = [
   {
+    video: "https://www.youtube.com/embed/-Jz1wsT7y9s", // main
+    img: "./img/thumbnails/showreel-thumbnail.jpg",
+  },
+  {
+    video: "https://www.youtube.com/embed/6eIB8Sfb2fU", // altria
+    img: "./img/thumbnails/altria-thumbnail.jpg",
+  },
+  {
+    video: "https://www.youtube.com/embed/WOUMMMAw7R0", // rms
+    img: "./img/thumbnails/rms-thumbnail.jpg",
+  },
+  {
+    video: "https://www.youtube.com/embed/f711_QC3pR0", // fpx
+    img: "./img/thumbnails/fpx-thumbnail.jpg",
+  },
+  {
     video: "https://www.youtube.com/embed/UBJ5QDsHkBg",
     img: "./img/thumbnails/apex-thumbnail.png",
   },
@@ -22,12 +38,12 @@ const assets = [
     img: "./img/thumbnails/opps-technologies-thumbnail.png",
   },
   {
-    video: "https://www.youtube.com/embed/YdEsfPeSxy8",
-    img: "./img/thumbnails/cuisine-thumbnail.png",
-  },
-  {
     video: "https://www.youtube.com/embed/lS301BBNqt4",
     img: "./img/thumbnails/barcc-thumbnail.png",
+  },
+  {
+    video: "https://www.youtube.com/embed/NvifQ1CbQHE", // cuisine solutions
+    img: "./img/thumbnails/cuisine-solutions-thumbnail.jpg",
   },
 ];
 
