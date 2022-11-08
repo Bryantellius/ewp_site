@@ -103,6 +103,12 @@ document.querySelector("#arrowLeft").addEventListener("click", () => {
 document.querySelector("#arrowRight").addEventListener("click", () => {
   cycleVideos(1);
 });
+document.querySelector("#prevImgThumbnail").addEventListener("click", () => {
+  cycleVideos(-1);
+});
+document.querySelector("#nextImgThumbnail").addEventListener("click", () => {
+  cycleVideos(1);
+});
 
 function toggleSideNavItem(e, ele) {
   document
