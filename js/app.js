@@ -47,6 +47,39 @@ const assets = [
   },
 ];
 
+const featuredBlogs = [
+  {
+    thumbnail: "../img/thumbnails/showreel-thumbnail.jpg",
+    title: "Blog Title",
+    date: new Date().toDateString(),
+    description: "Description of blog...",
+  },
+  {
+    thumbnail: "",
+    title: "Blog Title",
+    date: new Date().toDateString(),
+    description: "Description of blog...",
+  },
+  {
+    thumbnail: "",
+    title: "Blog Title",
+    date: new Date().toDateString(),
+    description: "Description of blog...",
+  },
+  {
+    thumbnail: "img/thumbnails/showreel-thumbnail.jpg",
+    title: "Blog Title",
+    date: new Date().toDateString(),
+    description: "Description of blog...",
+  },
+  {
+    thumbnail: "",
+    title: "Blog Title",
+    date: new Date().toDateString(),
+    description: "Description of blog...",
+  },
+];
+
 let currVidIdx = 0;
 let items = document.querySelectorAll(".videoItem");
 
@@ -79,6 +112,16 @@ function cycleVideos(dir) {
 
   items[1].src = assets[currVidIdx].video;
 }
+
+// RENDER FEATURED BLOGS
+
+let featuredBlogItems = document.querySelectorAll(".featureBlog");
+featuredBlogs.forEach((item, idx) => {
+  featuredBlogItems[
+    idx
+  ].innerHTML = `<h2 class="bolded">${item.title}</h2><h6 class="sectionTitle">${item.date}</h6><p class="text-light">${item.description}</p>`;
+  if (featuredBlogs[idx].thumbnail) featuredBlogItems[idx].style.backgroundImage = `url(${item.thumbnail})`;
+});
 
 // TOGGLE SIDENAV
 let isExpanded = false;

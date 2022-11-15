@@ -156,7 +156,9 @@ a {
   background-color: var(--dark);
 }
 
+/* ======== */
 /* OUR WORK */
+/* ======== */
 
 #ourWork {
   background-image: url(../img/backgrounds/our-work.png);
@@ -204,7 +206,8 @@ a {
   filter: grayscale(100%);
 }
 
-#nextImgThumbnail, #prevImgThumbnail {
+#nextImgThumbnail,
+#prevImgThumbnail {
   cursor: pointer;
 }
 
@@ -213,9 +216,86 @@ a {
   cursor: pointer;
 }
 
-/* END OUR WORK */
+/* ======== */
+/* BLOG */
+/* ======== */
+#blog {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 
-/* SERVICES */
+.blogGrid {
+  display: grid;
+  grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth";
+  gap: 0.5rem;
+}
+
+.featureBlog {
+  color: white;
+  padding: 1rem;
+  background: linear-gradient(#111, #333);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px 8px 8px 0;
+  min-height: 30vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+
+  cursor: pointer;
+
+  transition: transform 0.25s;
+}
+
+.featureBlog:hover {
+  transform: scale(1.05);
+}
+
+#featureBlog1 {
+  grid-area: first;
+}
+
+#featureBlog2 {
+  grid-area: second;
+}
+
+#featureBlog3 {
+  grid-area: third;
+}
+
+#featureBlog4 {
+  grid-area: fourth;
+}
+
+#featureBlog5 {
+  grid-area: fifth;
+}
+
+@media only screen and (min-width: 768px) {
+  .blog {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .blogGrid {
+    grid-template-areas:
+      "first first second"
+      "third fourth fifth";
+  }
+}
+
+/* ======== */
+/* WHAT WE DO */
+/* ======== */
+
 .servicesContainer {
   display: grid;
   grid-template-columns: 1fr;
@@ -282,11 +362,10 @@ a {
     transform: translate3d(-1692px, 0, 0); /* The image width */
   }
 }
-/* END SERVICES */
 
-/* #whatWeDo {
-  position: relative;
-} */
+/* ======== */
+/* WHO WE ARE */
+/* ======== */
 
 #servicesEagle {
   position: absolute;
@@ -444,9 +523,10 @@ a {
   color: var(--primary) !important;
 }
 
-/* END NAVS */
+/* ======== */
+/* CONTACT US */
+/* ======== */
 
-/* CONTACT FORM */
 .form .form-control {
   background-color: transparent;
   color: #eee;
@@ -484,7 +564,6 @@ a {
 .d-none {
   display: none;
 }
-/* END CONTACT FORM */
 
 /* LIGHTBOX */
 #fade {
